@@ -219,6 +219,7 @@ a{
     font-weight: bold;
     border:0px;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 .fa-arrow-circle-right{
@@ -321,6 +322,29 @@ a{
 .product-details p{
     font-weight: bold;
     color: #92A9BD;
+}
+
+.cards{
+    width:80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+/* Making the cards responsive  */
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 
