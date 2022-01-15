@@ -1,15 +1,15 @@
 /* Importing google fonts  */
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Lobster+Two&family=Merriweather&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Lobster+Two&family=Merriweather&family=Montserrat:wght@400;700&display=swap');
 
 
-*{
+/* *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-}
+} */
 
 .container{
     padding: 40px 50px;
@@ -20,7 +20,7 @@ p, a {
     font-family: 'Merriweather', serif;
 }
 
-h1{
+h1, h2{
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -35,13 +35,21 @@ a{
     font-size: 18px;
 }
 
-/* Navbar Styles  */
+/*-------------------------
+     Navbar Styles  
+---------------------------*/
 .nav{
     display: flex;
     justify-content: space-between;
 }
 .nav-links ul{
     display: flex;
+}
+.nav-link{
+    list-style: none;
+}
+.nav-link a{
+    text-decoration: none;
 }
 
 .nav-link, .nav-toggle{
@@ -69,7 +77,10 @@ a{
 .mobile-nav-links{
     display: none;
 }
-@media (max-width: 800px) {
+
+/* Making the nav bar mobile responsive  */
+
+@media (max-width: 850px) {
     .nav-link{
         display: none;
     }
@@ -92,6 +103,7 @@ a{
     .mobile-nav-link{
         padding: 10px 0px;
         border-radius: 10px;
+        list-style: none;
     }
 
     .mobile-nav-link:hover{
@@ -100,8 +112,223 @@ a{
 
     .mobile-nav-link a{
         color: #FFFFFF;
+        text-decoration: none;
     }
 }
+
+
+/*--------------------------
+     Banner Styles  
+----------------------------*/
+
+.banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.banner-heading{
+    font-size: 50px;
+}
+
+.banner-text{
+    font-size: 20px;
+}
+.banner-img{
+    display: flex;
+    justify-content: center;
+    animation-name: fading-img;
+    animation-duration: 3s;
+}
+
+@keyframes fading-img {
+    0%{
+        opacity: 0;
+    }
+    5%{
+        opacity: .05;
+    }
+    10%{
+        opacity: .1;
+    }
+    15%{
+        opacity: 0.15;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    30%{
+        opacity: 0.3;
+    }
+    35%{
+        opacity: 0.35;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    45%{
+        opacity: 0.45;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    55%{
+        opacity: 0.55;
+    }
+    60%{
+        opacity: .6;
+    }
+    65%{
+        opacity: .65;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    85%{
+        opacity: 0.85;
+    }
+    90%{
+        opacity: 0.9;
+    }
+    95%{
+        opacity: 0.95;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.banner-img img{
+    width: 440px;
+    height: 414px;
+}
+
+.banner-button button{
+    padding: 15px 20px;
+    background-color: #e22e6d;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border:0px;
+    border-radius: 30px;
+}
+
+.fa-arrow-circle-right{
+    margin-left: 10px;
+}
+
+
+/* Making the banner mobile responsive  */
+
+@media (max-width: 999px) {
+    .banner{
+        grid-template-columns: 1fr;
+    }
+    .banner-left{
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .banner-right{
+        grid-row: 1;
+    }
+
+    .banner-left h1{
+        
+        font-size: 30px;
+        
+    }
+
+}
+
+
+/*-------------------------
+     Sponsors Style  
+--------------------------*/
+.sponsors{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 20px;
+    margin: 100px auto 80px auto;
+    padding: 20px;
+}
+
+/* Make sponsor logo responsive  */
+@media (max-width: 980px) {
+    .sponsors{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 650px) {
+    .sponsors{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* Products Styles  */
+.products-title h2{
+    font-size: 35px;
+    text-align: center;
+}
+
+.card{
+    width: 340px;
+    height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-img{
+    margin: 0 auto;
+}
+
+.card-body{
+    margin-left: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.card-img img{
+    width: 300px;
+    height: 256px;
+}
+
+.card .fas{
+    color: #f28927;
+}
+
+.far{
+    margin-right: 10px;
+}
+
+.product-details p{
+    font-weight: bold;
+    color: #92A9BD;
+}
+
+
+
+
+
+
+
 
 
 
