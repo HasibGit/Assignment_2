@@ -11,6 +11,10 @@
     box-sizing: border-box;
 } */
 
+body{
+    margin: 0;
+}
+
 .container{
     padding: 40px 50px;
 }
@@ -371,9 +375,9 @@ a{
 
 .info{
     width:80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     justify-items: center;
     margin: 0 auto;
     background-color: #EEF2FF;
@@ -390,6 +394,34 @@ a{
 .social-link{
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
+}
+
+
+
+/* Footer Styles  */
+
+footer{
+    height: 170px;
+    background-color: #2C394B;
+}
+
+footer *{
+    color: white;
+}
+
+.footer-text{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text *{
+    margin-bottom: 0px;
+}
+.media-icons{
+    margin-top: 16px;
 }
 
 
