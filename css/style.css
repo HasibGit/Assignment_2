@@ -333,6 +333,22 @@ a{
     margin: 0 auto;
 }
 
+.products{
+    position: relative;
+}
+.see-more{
+    position: absolute;
+    right: 0;
+    margin-right: 130px;
+    margin-top: 50px;
+}
+.see-more a{
+    text-decoration: none;
+    color: #e22e6d;
+}
+
+
+
 /* Making the cards responsive  */
 
 @media (min-width: 1001px) and (max-width: 1200px) {
